@@ -23,3 +23,7 @@ Projeto: [nome, problema, público, fluxos principais e restrições].
 | 1 | Configuração base com o [Vibe Coding Toolkit](https://github.com/soumatheusgomes/vibe-coding-toolkit) | [steps/01-toolkit.md](steps/01-toolkit.md) |
 
 Novas etapas entram em `steps/` e na lista do [HARNESS.md](HARNESS.md).
+
+## Créditos
+
+A etapa 1 usa o [Vibe Coding Toolkit](https://github.com/soumatheusgomes/vibe-coding-toolkit), criado por [Matheus Gomes](https://github.com/soumatheusgomes) e distribuído sob a licença MIT. O harness-phd não copia o toolkit: ele lê os prompts direto do repositório original em cada execução. Todo o crédito pelo conteúdo do toolkit é do autor.
