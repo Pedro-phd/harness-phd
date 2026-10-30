@@ -21,9 +21,15 @@ Projeto: [nome, problema, público, fluxos principais e restrições].
 | # | Etapa | Arquivo |
 |---|---|---|
 | 1 | Configuração base com o [Vibe Coding Toolkit](https://github.com/soumatheusgomes/vibe-coding-toolkit) | [steps/01-toolkit.md](steps/01-toolkit.md) |
+| 2 | Pipeline de entrega com o [ship-it](https://github.com/samsantosb/ship-it): groundwork, guidelines e workflow | [steps/02-ship-it.md](steps/02-ship-it.md) |
+
+As etapas rodam em sequência. O progresso fica em `.harness/state.md` no projeto: se a sessão cair, cole o mesmo comando e o harness continua de onde parou.
 
 Novas etapas entram em `steps/` e na lista do [HARNESS.md](HARNESS.md).
 
 ## Créditos
 
-A etapa 1 usa o [Vibe Coding Toolkit](https://github.com/soumatheusgomes/vibe-coding-toolkit), criado por [Matheus Gomes](https://github.com/soumatheusgomes) e distribuído sob a licença MIT. O harness-phd não copia o toolkit: ele lê os prompts direto do repositório original em cada execução. Todo o crédito pelo conteúdo do toolkit é do autor.
+- Etapa 1: [Vibe Coding Toolkit](https://github.com/soumatheusgomes/vibe-coding-toolkit), criado por [Matheus Gomes](https://github.com/soumatheusgomes), licença MIT.
+- Etapa 2: [ship-it](https://github.com/samsantosb/ship-it), criado por [Samuel Santos](https://github.com/samsantosb), licença MIT.
+
+O harness-phd não copia esses projetos: ele lê os arquivos direto dos repositórios originais em cada execução. Todo o crédito pelo conteúdo é dos autores.
