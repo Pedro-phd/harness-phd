@@ -33,4 +33,4 @@ Leia só as skills cuja condição a tarefa atende. Uma tarefa pode atender vár
 
 ## Só por comando explícito do usuário
 
-`review-animations`, `pick-ui-library` e `prototype` têm a ativação automática desligada pelo autor. Use apenas quando o usuário chamar.
+`review-animations`, `pick-ui-library` e `prototype` têm a ativação automática desligada pelo autor. Use apenas quando o usuário pedir pelo nome.

@@ -2,7 +2,11 @@
 
 Este arquivo é carregado em toda sessão. Ele define quais skills usar em cada tipo de tarefa, dentro ou fora de qualquer fluxo (ship-it ou conversa solta).
 
-As skills ficam em `.claude/skills/<nome>/SKILL.md` (Claude Code) e `.agents/skills/<nome>/SKILL.md` (Codex e outros agentes). O conteúdo é o mesmo nos dois lugares.
+Onde ficam as skills:
+
+- Skills dos módulos: `.harness/skills/<nome>/SKILL.md`. Elas não aparecem na lista de skills do agente; leia o arquivo pelo caminho quando o módulo indicar. Arquivos citados dentro de uma skill (referências, scripts) são relativos à pasta dela.
+- Skills de outras etapas (toolkit, ship-it): `.claude/skills/` ou `.agents/skills/`, carregadas normalmente pelo agente.
+- Quando o usuário pedir uma skill pelo nome, procure primeiro em `.harness/skills/`.
 
 ## Como usar
 

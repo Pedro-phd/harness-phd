@@ -7,7 +7,7 @@ modules/
   ROUTER.md                 roteador instalado em .harness/ROUTER.md
   <módulo>/MODULE.md        quando usar cada skill do módulo, instalado em .harness/modules/<módulo>.md
   <módulo>/SOURCES.md       origem, commit e licença das skills de terceiros
-  <módulo>/skills/<skill>/  skill completa (SKILL.md + arquivos de apoio + LICENSE, se de terceiros)
+  <módulo>/skills/<skill>/  skill completa, instalada em .harness/skills/<skill>/ (SKILL.md + arquivos de apoio + LICENSE, se de terceiros)
 ```
 
 Para adicionar uma skill:
