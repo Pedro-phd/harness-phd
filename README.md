@@ -33,6 +33,7 @@ Novas etapas entram em `steps/` e na lista do [HARNESS.md](HARNESS.md).
 - Etapa 1: [Vibe Coding Toolkit](https://github.com/soumatheusgomes/vibe-coding-toolkit), criado por [Matheus Gomes](https://github.com/soumatheusgomes), licença MIT.
 - Módulo front: skills de design e motion de [Emil Kowalski](https://github.com/emilkowalski/skills), licença MIT. A origem de cada skill fica em `modules/<módulo>/SOURCES.md`.
 - Módulo back: adaptadores derivados de [Prisma](https://github.com/prisma/skills), [PlanetScale](https://github.com/planetscale/database-skills), [Supabase](https://github.com/supabase/agent-skills), [Neon](https://github.com/neondatabase/postgres-skills) (Apache-2.0) e [Redis](https://github.com/redis/agent-skills), licença MIT salvo indicação.
+- Módulo sec: [security-audit](https://github.com/cloudflare/security-audit-skill) da Cloudflare, licença MIT.
 - Etapa 2: [ship-it](https://github.com/samsantosb/ship-it), criado por [Samuel Santos](https://github.com/samsantosb), licença MIT.
 
 O toolkit e o ship-it não são copiados: o harness lê os arquivos direto dos repositórios originais em cada execução. As skills dos módulos são copiadas com a licença original. Todo o crédito pelo conteúdo é dos autores.
