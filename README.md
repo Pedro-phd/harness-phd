@@ -51,6 +51,7 @@ Ele segue sozinho, exceto nestes pontos:
 
 - **Etapa 1:** a descrição do projeto novo, se você não a passou no comando. Em projeto existente, o toolkit começa com um brainstorming e apresenta o plano.
 - **Etapa 2:** uma rodada de perguntas do `/groundwork` (tracker, tamanho máximo de PR, idioma) e a entrevista do `/make-guidelines`.
+- **Etapa 3:** só se já existir no projeto uma skill com o mesmo nome de uma skill do harness, vinda de outro lugar.
 - Qualquer etapa pode parar e perguntar se algo for ambíguo ou arriscado.
 
 A etapa 1 é a mais longa. Se o contexto da sessão estiver perto do limite, o harness termina a etapa atual, salva o progresso e pede para você colar o comando numa sessão nova.
@@ -77,8 +78,8 @@ Detalhes e como adicionar skills: [modules/README.md](modules/README.md).
 |---|---|
 | `.harness/state.md` | Progresso das etapas |
 | `.harness/ROUTER.md`, `.harness/modules/*.md` | Roteador e condições de cada módulo |
-| `.harness/skills/` | Skills dos módulos, lidas só quando o roteador indica. Ficam fora da lista de skills do agente para não gastar contexto. |
-| `.claude/skills/`, `.agents/skills/` | Skills do toolkit (Claude Code e outros agentes) |
+| `.harness/skills.lock` | Skills instaladas pelo harness, para atualizar e remover com segurança |
+| `.claude/skills/`, `.agents/skills/` | Skills dos módulos e do toolkit (Claude Code e outros agentes) |
 | `docs/agents/*.md`, `GUIDELINES.md` | Configuração e regras do ship-it |
 | `README.md`, `PRODUCT.md`, `AGENTS.md`, `CLAUDE.md`, `docs/*.md` | Documentação e instruções geradas pelo toolkit |
 

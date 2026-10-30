@@ -9,11 +9,16 @@ Instala todos os módulos do harness-phd no projeto e conecta o roteador ao `CLA
 
 ## 2. Instalar as skills
 
-As skills dos módulos ficam em `.harness/skills/`, fora das pastas que os agentes varrem (`.claude/skills/`, `.agents/skills/`). Assim, os nomes e as descrições delas não entram em toda sessão: o agente só lê uma skill quando o roteador mandar.
+Cada pasta `modules/<módulo>/skills/<nome>/` do harness é uma skill. Ignore `.gitkeep`. Skills citadas nos `MODULE.md` que vêm de outras etapas (toolkit, ship-it) não são instaladas aqui.
 
-1. Substitua `.harness/skills/` inteira pelo conteúdo de todas as pastas `modules/<módulo>/skills/<nome>/` do harness, ignorando `.gitkeep`. A pasta é só do harness; nada de fora deve ficar nela.
-2. Skills citadas nos `MODULE.md` que vêm de outras etapas (toolkit, ship-it) não são instaladas aqui.
-3. Migração de versões antigas: se existir `.harness/skills.lock`, apague de `.claude/skills/` e de `.agents/skills/` cada skill listada nele e depois apague o lock. Não toque em skills que não estejam no lock.
+1. Leia `.harness/skills.lock` no projeto, se existir. Ele lista as skills que o harness instalou antes, uma por linha.
+2. Para cada skill, copie a pasta inteira para `.claude/skills/<nome>/` e para `.agents/skills/<nome>/`.
+   - Se o destino não existir, copie.
+   - Se o destino existir e o nome estiver no `.harness/skills.lock`, substitua: a skill é do harness.
+   - Se o destino existir e o nome não estiver no lock, a skill veio de outro lugar (toolkit, ship-it ou o usuário). Não substitua. Mostre o conflito ao usuário e pergunte qual versão manter.
+3. Skills que estão no lock mas não existem mais no harness foram removidas dos módulos: apague-as de `.claude/skills/` e `.agents/skills/`.
+4. Reescreva `.harness/skills.lock` com os nomes instalados agora, um por linha.
+5. Se existir `.harness/skills/` (versão anterior do harness), apague a pasta.
 
 ## 3. Instalar plugins externos (só Claude Code)
 
@@ -36,7 +41,7 @@ Alguns módulos usam plugins do Claude Code que não são skills portáteis. Ele
 ## 5. Concluir
 
 1. Apague a pasta temporária.
-2. Verifique se `.harness/ROUTER.md`, `.harness/modules/` e `.harness/skills/` existem, se as duas linhas estão no `CLAUDE.md` e no `AGENTS.md`, e se cada skill citada nos `MODULE.md` como deste módulo tem `.harness/skills/<nome>/SKILL.md`.
+2. Verifique se `.harness/ROUTER.md` e os arquivos de `.harness/modules/` existem, se as duas linhas estão no `CLAUDE.md` e no `AGENTS.md`, e se cada skill do lock existe nas duas pastas.
 3. Meça o contexto que entra em toda sessão:
    - Claude Code: `CLAUDE.md` mais todos os arquivos que ele importa com `@`, recursivamente (por exemplo `@AGENTS.md` e `@.harness/ROUTER.md`). Conte cada arquivo uma vez.
    - Outros agentes: `AGENTS.md`.

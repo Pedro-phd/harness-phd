@@ -6,4 +6,6 @@
 
 Não incluídas: `write-swift` (Swift, fora de front web) e `animate-expo` (React Native/Expo, candidata a um futuro módulo `mobile`).
 
+Mudança feita na cópia: `find-animation-opportunities`, `improve-animations`, `remove-animations`, `animation-vocabulary` e `ask-sonner` receberam `disable-model-invocation: true` no frontmatter, para não ocupar contexto. Reaplique ao atualizar.
+
 Para atualizar: clone o repositório de origem, copie de novo as pastas listadas e atualize o commit acima.

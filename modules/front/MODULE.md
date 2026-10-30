@@ -25,12 +25,18 @@ Leia só as skills cuja condição a tarefa atende. Uma tarefa pode atender vár
 | `animation-performance` | Animação travando, perdendo frames, ou ao escolher propriedade/técnica por desempenho. |
 | `mobile-native` | App web pensado para celular, PWA, toque, safe areas, bottom sheets. |
 | `break-ui` | Componente ou tela nova que exibe dados variáveis: testar nomes longos, listas vazias, números extremos. |
-| `ask-sonner` | Quando o projeto usa Sonner (toasts). |
-| `find-animation-opportunities` | Só quando o usuário perguntar onde vale animar. |
-| `improve-animations` | Só quando o usuário pedir auditoria ou plano de melhoria das animações. |
-| `remove-animations` | Só quando o usuário achar a interface lenta ou animada demais. |
-| `animation-vocabulary` | Só quando o usuário quiser o nome de um efeito de animação. |
 
 ## Só por comando explícito do usuário
 
-`review-animations`, `pick-ui-library` e `prototype` têm a ativação automática desligada pelo autor. Use apenas quando o usuário pedir pelo nome.
+Estas skills têm a ativação automática desligada: não entram no contexto e só rodam quando o usuário chama pelo nome ou slash command.
+
+| Skill | Para quê |
+|---|---|
+| `review-animations` | Revisão rigorosa das animações. |
+| `pick-ui-library` | Escolher biblioteca para uma tarefa de front. |
+| `prototype` | Gerar várias versões de um componente com seletor. |
+| `find-animation-opportunities` | Onde vale animar. |
+| `improve-animations` | Auditoria e plano de melhoria das animações. |
+| `remove-animations` | Tirar animação desnecessária quando a interface parece lenta. |
+| `animation-vocabulary` | Nome certo de um efeito de animação. |
+| `ask-sonner` | Dúvidas e problemas com Sonner (toasts). |
