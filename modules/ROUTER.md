@@ -19,5 +19,5 @@ As skills ficam em `.claude/skills/<nome>/SKILL.md` (Claude Code) e `.agents/ski
 | `quality` | Sempre que a tarefa criar, alterar ou revisar código. | _a definir_ |
 | `sec` | Sempre que a tarefa mexer em código executável, configuração, dependências, autenticação, permissões ou fluxo de dados. Não ativa para edição só de documentação. | _a definir_ |
 | `front` | Interface renderizada: páginas, componentes, layout, responsividade, estados visuais, animação. | Ver `.harness/modules/front.md` |
-| `back` | Endpoints, serviços, regras de negócio, persistência, integrações, jobs, webhooks. | _a definir_ |
+| `back` | Endpoints, serviços, regras de negócio, persistência, integrações, jobs, webhooks. | Ver `.harness/modules/back.md` |
 | `debug` | Investigar bug, erro, falha, comportamento inesperado, regressão ou lentidão. | `diagnosing-bugs` (pendente) |
