@@ -35,6 +35,7 @@ Novas etapas entram em `steps/` e na lista do [HARNESS.md](HARNESS.md).
 - Módulo back: adaptadores derivados de [Prisma](https://github.com/prisma/skills), [PlanetScale](https://github.com/planetscale/database-skills), [Supabase](https://github.com/supabase/agent-skills), [Neon](https://github.com/neondatabase/postgres-skills) (Apache-2.0) e [Redis](https://github.com/redis/agent-skills), licença MIT salvo indicação.
 - Módulo sec: [security-audit](https://github.com/cloudflare/security-audit-skill) da Cloudflare, licença MIT.
 - Módulo sec: plugin `insecure-defaults` da [Trail of Bits](https://github.com/trailofbits/skills), licença CC-BY-SA-4.0, instalado pelo marketplace (não copiado).
+- Módulos quality e debug: `tdd` e `diagnosing-bugs` de [Matt Pocock](https://github.com/mattpocock/skills) (MIT) e `property-based-testing` da [Trail of Bits](https://github.com/trailofbits/skills) (CC-BY-SA-4.0).
 - Etapa 2: [ship-it](https://github.com/samsantosb/ship-it), criado por [Samuel Santos](https://github.com/samsantosb), licença MIT.
 
 O toolkit e o ship-it não são copiados: o harness lê os arquivos direto dos repositórios originais em cada execução. As skills dos módulos são copiadas com a licença original. Todo o crédito pelo conteúdo é dos autores.
