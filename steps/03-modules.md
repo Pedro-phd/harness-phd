@@ -9,7 +9,7 @@ Instala todos os módulos do harness-phd no projeto e conecta o roteador ao `CLA
 
 ## 2. Instalar as skills
 
-Cada pasta `modules/<módulo>/skills/<nome>/` do harness é uma skill. Ignore `.gitkeep`. Se nenhum módulo tiver skills ainda, pule para o passo 3.
+Cada pasta `modules/<módulo>/skills/<nome>/` do harness é uma skill. Ignore `.gitkeep`. Skills citadas nos `MODULE.md` que vêm de outras etapas (toolkit, ship-it) não são instaladas aqui. Se nenhum módulo tiver skills ainda, pule para o passo 3.
 
 1. Leia `.harness/skills.lock` no projeto, se existir. Ele lista as skills que o harness instalou antes, uma por linha.
 2. Para cada skill, copie a pasta inteira para `.claude/skills/<nome>/` e para `.agents/skills/<nome>/`.
@@ -22,11 +22,12 @@ Cada pasta `modules/<módulo>/skills/<nome>/` do harness é uma skill. Ignore `.
 ## 3. Instalar o roteador
 
 1. Copie `modules/ROUTER.md` do harness para `.harness/ROUTER.md`, substituindo a versão anterior.
-2. No `CLAUDE.md` da raiz, garanta a linha `@.harness/ROUTER.md`. Ela importa o roteador em toda sessão do Claude Code. Crie o arquivo se não existir. Não duplique a linha e não altere o resto do arquivo.
-3. No `AGENTS.md` da raiz, garanta a linha `Antes de qualquer tarefa, leia e siga .harness/ROUTER.md.` o mais perto possível do topo, logo após o título. Mesmas regras: sem duplicar, sem alterar o resto.
+2. Para cada `modules/<módulo>/MODULE.md` do harness, copie para `.harness/modules/<módulo>.md`. Apague de `.harness/modules/` os arquivos de módulos que não existem mais no harness.
+3. No `CLAUDE.md` da raiz, garanta a linha `@.harness/ROUTER.md`. Ela importa o roteador em toda sessão do Claude Code. Crie o arquivo se não existir. Não duplique a linha e não altere o resto do arquivo.
+4. No `AGENTS.md` da raiz, garanta a linha `Antes de qualquer tarefa, leia e siga .harness/ROUTER.md.` o mais perto possível do topo, logo após o título. Mesmas regras: sem duplicar, sem alterar o resto.
 
 ## 4. Concluir
 
 1. Apague a pasta temporária.
-2. Verifique se `.harness/ROUTER.md` existe, se as duas linhas estão no `CLAUDE.md` e no `AGENTS.md`, e se cada skill do lock existe nas duas pastas.
+2. Verifique se `.harness/ROUTER.md` e os arquivos de `.harness/modules/` existem, se as duas linhas estão no `CLAUDE.md` e no `AGENTS.md`, e se cada skill do lock existe nas duas pastas.
 3. Registre no progresso: commit do harness, skills instaladas por módulo, conflitos e pendências. Skills marcadas como pendentes no roteador entram nas pendências.

@@ -31,6 +31,7 @@ Novas etapas entram em `steps/` e na lista do [HARNESS.md](HARNESS.md).
 ## Créditos
 
 - Etapa 1: [Vibe Coding Toolkit](https://github.com/soumatheusgomes/vibe-coding-toolkit), criado por [Matheus Gomes](https://github.com/soumatheusgomes), licença MIT.
+- Módulo front: skills de design e motion de [Emil Kowalski](https://github.com/emilkowalski/skills), licença MIT. A origem de cada skill fica em `modules/<módulo>/SOURCES.md`.
 - Etapa 2: [ship-it](https://github.com/samsantosb/ship-it), criado por [Samuel Santos](https://github.com/samsantosb), licença MIT.
 
-O harness-phd não copia esses projetos: ele lê os arquivos direto dos repositórios originais em cada execução. Todo o crédito pelo conteúdo é dos autores.
+O toolkit e o ship-it não são copiados: o harness lê os arquivos direto dos repositórios originais em cada execução. As skills dos módulos são copiadas com a licença original. Todo o crédito pelo conteúdo é dos autores.
