@@ -22,6 +22,7 @@ Projeto: [nome, problema, público, fluxos principais e restrições].
 |---|---|---|
 | 1 | Configuração base com o [Vibe Coding Toolkit](https://github.com/soumatheusgomes/vibe-coding-toolkit) | [steps/01-toolkit.md](steps/01-toolkit.md) |
 | 2 | Pipeline de entrega com o [ship-it](https://github.com/samsantosb/ship-it): groundwork, guidelines e workflow | [steps/02-ship-it.md](steps/02-ship-it.md) |
+| 3 | Módulos de skills e o roteador que diz quando usar cada um | [steps/03-modules.md](steps/03-modules.md) |
 
 As etapas rodam em sequência. O progresso fica em `.harness/state.md` no projeto: se a sessão cair, cole o mesmo comando e o harness continua de onde parou.
 

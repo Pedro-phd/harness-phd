@@ -38,3 +38,4 @@ Se o arquivo listar etapas antigas ou faltar alguma etapa nova da lista abaixo, 
 
 1. `01-toolkit.md`: configuração base com o Vibe Coding Toolkit.
 2. `02-ship-it.md`: pipeline de entrega com o ship-it (groundwork, guidelines e workflow).
+3. `03-modules.md`: módulos de skills (quality, sec, front, back, debug) e o roteador.
