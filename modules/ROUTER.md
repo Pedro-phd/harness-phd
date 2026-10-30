@@ -10,7 +10,8 @@ As skills ficam em `.claude/skills/<nome>/SKILL.md` (Claude Code) e `.agents/ski
 2. Para cada módulo ativado, leia `.harness/modules/<módulo>.md`. Ele diz quais skills do módulo usar e em que condição.
 3. Siga a ordem `sec`, `quality`, `front`, `back`, `debug`. Carregue só os módulos e as skills que a tarefa pede.
 4. Se uma skill listada não existir no projeto, avise o usuário em uma linha e siga sem ela. Não invente um substituto.
-5. O pedido explícito do usuário e as regras do projeto (`GUIDELINES.md`, `AGENTS.md`) prevalecem sobre as skills.
+5. Antes de escrever ou revisar código, leia o `GUIDELINES.md` da raiz e o `GUIDELINES.md` da pasta do módulo tocado, se existirem. Vale para qualquer tarefa, dentro ou fora do ship-it.
+6. O pedido explícito do usuário e as regras do projeto (`GUIDELINES.md`, `AGENTS.md`) prevalecem sobre as skills.
 
 ## Módulos
 

@@ -41,4 +41,10 @@ Alguns módulos usam plugins do Claude Code que não são skills portáteis. Ele
 
 1. Apague a pasta temporária.
 2. Verifique se `.harness/ROUTER.md` e os arquivos de `.harness/modules/` existem, se as duas linhas estão no `CLAUDE.md` e no `AGENTS.md`, e se cada skill do lock existe nas duas pastas.
-3. Registre no progresso: commit do harness, skills instaladas por módulo, conflitos e pendências. Skills marcadas como pendentes no roteador entram nas pendências.
+3. Meça o contexto que entra em toda sessão:
+   - Claude Code: `CLAUDE.md` mais todos os arquivos que ele importa com `@`, recursivamente (por exemplo `@AGENTS.md` e `@.harness/ROUTER.md`). Conte cada arquivo uma vez.
+   - Outros agentes: `AGENTS.md`.
+   - Estime os tokens como caracteres ÷ 4 e informe o total de cada um, com os três maiores trechos.
+   - Se `CLAUDE.md` importa `AGENTS.md` e os dois têm a mesma seção (por exemplo `## Agent skills` ou `## Guidelines`, escritas pelo ship-it), aponte a duplicação. Não remova: o ship-it mantém as duas cópias em sincronia.
+   - Acima de 6.000 tokens, sugira ao usuário o que enxugar. Não corte nada sem aprovação.
+4. Registre no progresso: commit do harness, skills instaladas por módulo, conflitos, tokens medidos e pendências.
