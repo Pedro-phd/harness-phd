@@ -19,14 +19,25 @@ Cada pasta `modules/<módulo>/skills/<nome>/` do harness é uma skill. Ignore `.
 3. Skills que estão no lock mas não existem mais no harness foram removidas dos módulos: apague-as de `.claude/skills/` e `.agents/skills/`.
 4. Reescreva `.harness/skills.lock` com os nomes instalados agora, um por linha.
 
-## 3. Instalar o roteador
+## 3. Instalar plugins externos (só Claude Code)
+
+Alguns módulos usam plugins do Claude Code que não são skills portáteis. Eles ficam instalados na máquina, como o ship-it.
+
+| Plugin | Módulo | Marketplace |
+|---|---|---|
+| `insecure-defaults@trailofbits` | sec | `trailofbits/skills` |
+
+1. Verifique com `claude plugin list`. Para cada plugin ausente: `claude plugin marketplace add <marketplace>` (se o marketplace ainda não estiver registrado) e `claude plugin install <plugin>`. Para os presentes: `claude plugin update <plugin>`.
+2. Fora do Claude Code, pule este passo e registre nas pendências que esses plugins não estão disponíveis neste agente.
+
+## 4. Instalar o roteador
 
 1. Copie `modules/ROUTER.md` do harness para `.harness/ROUTER.md`, substituindo a versão anterior.
 2. Para cada `modules/<módulo>/MODULE.md` do harness, copie para `.harness/modules/<módulo>.md`. Apague de `.harness/modules/` os arquivos de módulos que não existem mais no harness.
 3. No `CLAUDE.md` da raiz, garanta a linha `@.harness/ROUTER.md`. Ela importa o roteador em toda sessão do Claude Code. Crie o arquivo se não existir. Não duplique a linha e não altere o resto do arquivo.
 4. No `AGENTS.md` da raiz, garanta a linha `Antes de qualquer tarefa, leia e siga .harness/ROUTER.md.` o mais perto possível do topo, logo após o título. Mesmas regras: sem duplicar, sem alterar o resto.
 
-## 4. Concluir
+## 5. Concluir
 
 1. Apague a pasta temporária.
 2. Verifique se `.harness/ROUTER.md` e os arquivos de `.harness/modules/` existem, se as duas linhas estão no `CLAUDE.md` e no `AGENTS.md`, e se cada skill do lock existe nas duas pastas.
