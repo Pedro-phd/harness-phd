@@ -9,7 +9,7 @@ https://raw.githubusercontent.com/Pedro-phd/harness-phd/main/steps/<arquivo>
 O progresso fica em `.harness/state.md`, na pasta do projeto. É ele que permite rodar tudo em sequência sem se perder.
 
 1. Antes de tudo, leia `.harness/state.md`. Se não existir, crie com a lista de etapas abaixo, todas como `pendente`.
-2. Pule as etapas marcadas como `concluída`. Comece pela primeira etapa `pendente` ou `em andamento`. Uma etapa `em andamento` foi interrompida: retome a partir do que já existe no projeto, sem refazer o que está feito.
+2. Pule as etapas marcadas como `concluída`, exceto as marcadas como **sempre** na lista de etapas: essas rodam de novo em toda execução, porque são rápidas e é assim que o projeto recebe atualizações. Comece pela primeira etapa `pendente` ou `em andamento`. Uma etapa `em andamento` foi interrompida: retome a partir do que já existe no projeto, sem refazer o que está feito.
 3. Ao iniciar uma etapa, marque `em andamento`. Ao terminar e verificar, marque `concluída` com a data e um resumo de uma linha (versões, decisões, pendências). Atualize o arquivo antes de passar para a próxima etapa.
 4. Se uma etapa bloquear, marque `bloqueada` com o motivo, pare e relate. Não pule etapas.
 
@@ -38,4 +38,4 @@ Se o arquivo listar etapas antigas ou faltar alguma etapa nova da lista abaixo, 
 
 1. `01-toolkit.md`: configuração base com o Vibe Coding Toolkit.
 2. `02-ship-it.md`: pipeline de entrega com o ship-it (groundwork, guidelines e workflow).
-3. `03-modules.md`: módulos de skills (quality, sec, front, back, debug) e o roteador.
+3. `03-modules.md`: módulos de skills (quality, sec, front, back, debug) e o roteador. **Sempre.**
